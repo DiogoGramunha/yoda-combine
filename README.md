@@ -3,7 +3,7 @@ discord: https://discord.gg/YHBgnK6BtU
 
 preview: https://youtu.be/itD9IB5oGNI
 
-# yoda-Combine
+# yoda-combine
 Combine items, for ox_inventory
 
 In server.lua you can make your combinations
