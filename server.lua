@@ -10,25 +10,6 @@ local Combinations = {
         removeItemA = true,
         removeItemB = true,
     }, ]]
-
-    ['weed_lemonhaze'] = {
-        needs = 'paper', 
-        result = {
-            [1] = {name = 'weed_bagged', amount = 2},
-            --[2] = {name = 'something', amount = 5},
-        }, 
-        removeItemA = true, -- Remove the dragged item?
-        removeItemB = true, -- Remove the item you dragged onto?
-    },
-    ['paper'] = {
-        needs = 'weed_lemonhaze', 
-        result = {
-            [1] = {name = 'weed_bagged', amount = 2},
-            --[2] = {name = 'something', amount = 5},
-        }, 
-        removeItemA = true, -- Remove the dragged item?
-        removeItemB = true, -- Remove the item you dragged onto?
-    },
 }
 
 local function combineItems(source, fromSlot, toSlot)
