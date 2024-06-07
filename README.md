@@ -6,7 +6,7 @@ preview: https://youtu.be/itD9IB5oGNI
 # yoda-combine
 Combine items, for ox_inventory
 
-In server.lua you can make your combinations
+You can create your own combinations simply using the example in config.lua
 
 Depedencies:
 -ox_inventory
