@@ -5,9 +5,10 @@ local framework = exports.ox_inventory
 local function combineItems(source, fromSlot, toSlot)
     local combo = Combinations[fromSlot.name]
     if combo and toSlot.name == combo.needs then
-        TriggerClientEvent('ox_inventory:closeInventory', source)
-        TriggerClientEvent('yoda-combine:Combine', source)
-        Citizen.Wait(2000)
+        local response = lib.callback.await('yoda-combine:Combine', source)
+
+        if not response then return false end
+
         if combo.removeItemA then
             framework:RemoveItem(source, fromSlot.name, 1)
         end

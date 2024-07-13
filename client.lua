@@ -1,12 +1,11 @@
-RegisterNetEvent('yoda-combine:Combine')
-AddEventHandler('yoda-combine:Combine', function()
+lib.callback.register('yoda-combine:Combine', function()
     if Config.UseProgressCircle then
-        exports.ox_lib:progressCircle({
+        return exports.ox_lib:progressCircle({
             duration = 2000,
             label = 'Combining..',
             position = 'bottom',
             useWhileDead = false,
-            canCancel = false,
+            canCancel = true,
             disable = {
                 car = true,
             },
@@ -16,11 +15,11 @@ AddEventHandler('yoda-combine:Combine', function()
             },
         })
     else
-        exports.ox_lib:progressBar({
+        return exports.ox_lib:progressBar({
             duration = 2000,
             label = 'Combining..',
             useWhileDead = false,
-            canCancel = false,
+            canCancel = true,
             disable = {
                 car = true,
             },
