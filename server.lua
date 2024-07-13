@@ -1,4 +1,4 @@
-local Combinations = config.Combinations
+local Combinations = Config.Combinations
 
 local framework = exports.ox_inventory
 
