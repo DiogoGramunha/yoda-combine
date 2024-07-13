@@ -10,7 +10,7 @@ You can create your own combinations simply using the example in `config.lua`
 
 Add in your own actions if the system gets exploited in `server.lua`.
 
-Depedencies:
--ox_inventory
--ox_lib
+### Depedencies:
+- [ox_inventory](https://github.com/overextended/ox_inventory)
+- [ox_lib](https://github.com/overextended/ox_lib)
 
