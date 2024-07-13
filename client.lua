@@ -1,4 +1,5 @@
-lib.callback.register('yoda-combine:Combine', function(data)
+RegisterNetEvent('yoda-combine:Combine')
+AddEventHandler('yoda-combine:Combine', function(data)
     local dict, clip, duration = 'amb@prop_human_parking_meter@male@base', 'base', 2000
 
     if data and type(data) == "table" then
@@ -7,8 +8,9 @@ lib.callback.register('yoda-combine:Combine', function(data)
         duration = data?.duration or duration
     end
 
+    local completed = false
     if Config.UseProgressCircle then
-        return exports.ox_lib:progressCircle({
+        completed = exports.ox_lib:progressCircle({
             duration = duration,
             label = Config.ProgressText,
             position = 'bottom',
@@ -23,7 +25,7 @@ lib.callback.register('yoda-combine:Combine', function(data)
             },
         })
     else
-        return exports.ox_lib:progressBar({
+        completed = exports.ox_lib:progressBar({
             duration = duration,
             label = Config.ProgressText,
             useWhileDead = false,
@@ -37,4 +39,5 @@ lib.callback.register('yoda-combine:Combine', function(data)
             },
         })
     end
+    TriggerServerEvent('yoda-combine:FinishedCombine', completed)
 end)

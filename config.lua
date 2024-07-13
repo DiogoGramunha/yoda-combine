@@ -4,6 +4,8 @@ Config = {
 
     UseProgressCircle = true,
 
+    KickPlayerExploiting = true,
+
     Combinations = {
 
     --[[ --------------- Template ----------------------
