@@ -10,7 +10,7 @@ lib.callback.register('yoda-combine:Combine', function(data)
     if Config.UseProgressCircle then
         return exports.ox_lib:progressCircle({
             duration = duration,
-            label = 'Combining..',
+            label = Config.ProgressText,
             position = 'bottom',
             useWhileDead = false,
             canCancel = true,
@@ -25,7 +25,7 @@ lib.callback.register('yoda-combine:Combine', function(data)
     else
         return exports.ox_lib:progressBar({
             duration = duration,
-            label = 'Combining..',
+            label = Config.ProgressText,
             useWhileDead = false,
             canCancel = true,
             disable = {

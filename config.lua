@@ -1,5 +1,7 @@
 Config = {
 
+    ProgressText = 'Combining...',
+
     UseProgressCircle = true,
 
     Combinations = {
@@ -25,5 +27,6 @@ Config = {
         },
 
     ]] -------------------------------------------------
+
     }
 }
