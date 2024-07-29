@@ -23,7 +23,7 @@ Config = {
                     dict = "amb@prop_human_parking_meter@male@base",
                     clip = "main"
                 }
-            }
+            },
             removeItemA = true, -- Remove the first Item (here: "itemname")
             removeItemB = true, -- Remove the second Item (here: "the other itemname")
         },
